@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgb(86, 141, 219);
+  min-height: 100vh;
+  min-width: 100vw;
+  overflow-x: hidden;
+}
+
+.container {
+  min-width: 95%;
+  border-radius: 5px;
+  margin: 50px;
+  overflow: hidden;
+  background-color: rgb(255, 255, 255);
+}
+
+.top-section {
+  min-width: 100%;
+  max-height: 100px;
+  padding: 20px 0px 5px 5px;
+  text-align: left;
+  background: linear-gradient(45deg, rgb(68, 64, 64), rgb(43, 40, 40));
+}
+
+.register {
+  font-family: "Open Sans", sans-serif;
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+  margin-left: 20px;
+  color: white;
+}
+
+.middle-section {
+  min-width: 100%;
+}
+
+.input-box {
+  min-width: 100%;
+  margin-top: 20px;
+}
+
+.input-box:hover .text {
+  opacity: 0.5;
+}
+
+.text {
+  font-size: 1rem;
+  font-family: "Roboto Condensed", sans-serif;
+  margin-left: 20px;
+  margin-bottom: 2px;
+  color: #020b18;
+  transition: 150ms ease-in-out;
+}
+
+.input {
+  margin-left: 20px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 5px;
+  width: 90%;
+  padding: 10px 5px 10px 10px;
+  font-family: "Source Code Pro", monospace;
+  transition: 500ms ease-in-out;
+  background-color: rgb(217, 230, 250);
+  border-radius: 10px;
+}
+.input:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px 2px rgb(58, 201, 177);
+}
+
+.bottom-section {
+  width: 100%;
+  display: flex;
+  margin-top: 30px;
+}
+
+.button {
+  border: none;
+  margin-left: 30px;
+  padding: 10px 30px 10px 30px;
+  border-radius: 25px;
+  font-size: 1.01rem;
+  font-weight: bolder;
+  color: white;
+  background-color: #5855f2;
+  margin-bottom: 15px;
+  transition: 150ms ease-in-out;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.down {
+  font-family: "Source Code Pro", monospace;
+  margin: 0px 0px 10px 20px;
+}
+
+.svg {
+  position: absolute;
+  left: 10px;
+  display: none;
+}
+
+.svg2 {
+  position: absolute;
+  bottom: 10px;
+  display: none;
+}
+
+.warning,
+.warning p {
+  color: red;
+}
+
+.warning input:focus,
+.warning .span:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.down {
+  display: none;
+  font-size: 0.8rem;
+  font-weight: lighter;
+}
+.warning .down {
+  display: initial;
+}
+
+@media screen and (min-width: 550px) {
+  .container {
+    max-width: 500px;
+    margin-top: 30px;
+    min-width: 500px;
+    margin-bottom: 20px;
+  }
+
+  .svg,
+  .svg2 {
+    display: initial;
+    z-index: -2;
+  }
+  .button:hover {
+    background-color: white;
+    color: #5855f2;
+    border: 2px solid #5855f2;
+    margin-left: 28px;
+  }
+}
+
+.span {
+  background-color: rgb(217, 230, 250);
+  padding: 20px 5px 20px 10px;
+  margin-left: 20px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 5px;
+  max-width: 90%;
+  font-family: "comic Sans Ms";
+  font-size: 0.8rem;
+  border-radius: 10px;
+  transition: 500ms ease-in-out;
+}
+
+.span:focus {
+  outline: none;
+  box-shadow: 0px 0px 0px 3px rgb(58, 201, 177);
+}
+
+.warning input,
+.warning .span {
+  border: 1px solid red;
+}
+
+.serverResponse {
+  transition: 200ms ease-in-out;
+  margin-top: 10px;
+  margin-left: 20px;
+  font-size: 0.8rem;
+  color: red;
+  font-family: "comic Sans ms";
+  display: none;
+}
+
+@media only screen and (max-width: 350px) {
+  .container {
+    margin: 50px 5px 50px 5px;
+  }
+
+  .top-section {
+    padding: 20px 0px 5px 0px;
+  }
+
+  .register {
+    letter-spacing: initial;
+    font-size: 1.5rem;
+  }
+
+  .button {
+    margin-left: 10px;
+    font-size: 1rem;
+    padding: 10px 15px 10px 15px;
+    margin-right: 0px;
+  }
+
+  .serverResponse {
+    font-size: 0.7rem;
+  }
+}
